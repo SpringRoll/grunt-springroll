@@ -86,15 +86,11 @@ module.exports = function(grunt, options)
 	grunt.config.set('hasCopy', hasCopy);
 
 	// Format into format for grunt-contrib-copy
-	if (hasCopy)
-	{
+	if (hasCopy) {
 		librariesCopy = {};
-		_.each(file.librariesCopy, function(dest, src){
-			var id = path.basename(src)
-				.replace(/[^a-zA-Z0-9]/g, '')
-				.toLowerCase();
-
-			librariesCopy[id] = {
+		var id = 0;
+		_.each(file.librariesCopy, function (dest, src) {
+			librariesCopy[id++] = {
 				src: src,
 				dest: dest,
 				expand: true,
@@ -102,6 +98,7 @@ module.exports = function(grunt, options)
 			};
 		});
 	}
+
 
 	return {
 
