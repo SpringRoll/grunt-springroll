@@ -1,3 +1,8 @@
+# Depreciated
+With the release of SpringRoll 2.0 this repository has been deprecated.
+
+It has been replaced by the [Springroll-seed](https://github.com/SpringRoll/Springroll-Seed) project
+
 # Grunt SpringRoll [![Dependency Status](https://david-dm.org/SpringRoll/grunt-springroll.svg?style=flat)](https://david-dm.org/SpringRoll/grunt-springroll) [![Build Status](https://travis-ci.org/SpringRoll/grunt-springroll.svg)](https://travis-ci.org/SpringRoll/grunt-springroll) [![npm version](https://badge.fury.io/js/grunt-springroll.svg)](http://badge.fury.io/js/grunt-springroll)
 
 Grunt SpringRoll is a Node plugin which provides common project build tasks for creating SpringRoll projects. The plugin requires both [Grunt](http://gruntjs.com/) and [Bower](http://bower.io/) to be installed on the local system in order to build.
@@ -67,8 +72,8 @@ Task | Description
 **debug** | Alias for **build-debug** task.
 **dev** | Development mode to build the project, this watches source files and auto-rebuilds whenever there's a change in CSS, main JavaScript or assets.
 **dev-main** | Development mode which watches source JavaScript files only and auto-rebuilds whenever there's a change. Faster than **dev** because it excludes assets building.
-**config** | Concatenate the JSON source files into a single release configuration file. The configuration file is required for all project and contains useful implementation-sepecific information to be loaded at run-time, like level data, sound library, etc. All JS-style code blocks and comments are removed from the source files. 
-**config-debug** | The debug version of the **config** task. 
+**config** | Concatenate the JSON source files into a single release configuration file. The configuration file is required for all project and contains useful implementation-sepecific information to be loaded at run-time, like level data, sound library, etc. All JS-style code blocks and comments are removed from the source files.
+**config-debug** | The debug version of the **config** task.
 **assets** | Minify all assets JavaScript files
 **assets-debug** | Combine all assets JavaScript files with source maps for better debugging
 **libs** | Import and rebuild the external dependencies
@@ -85,7 +90,7 @@ These are the list of grunt tasks which are safe to be overridden using `grunt.r
 
 Task | Description
 ---|---
-**_pre-build** | Before the build starts. 
+**_pre-build** | Before the build starts.
 **_pre-build-debug** | Before the debug build starts.
 **_post-build** | After the build ends.
 **_post-build-debug** | After the debug build ends.
