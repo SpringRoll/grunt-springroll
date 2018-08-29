@@ -1,4 +1,4 @@
-# Depreciated
+# Deprecated
 With the release of SpringRoll 2.0 this repository has been deprecated.
 
 It has been replaced by the [Springroll-seed](https://github.com/SpringRoll/Springroll-Seed) project
