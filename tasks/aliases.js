@@ -50,7 +50,7 @@ module.exports = function(grunt)
 			"_pre-build",
 			"clean:main",
 			"jshint:main",
-			"uglify:main",
+			"terser:main",
 			"clean:css",
 			"less:release",
 			"clean:config",
@@ -108,7 +108,7 @@ module.exports = function(grunt)
 			"clean:libraries",
 			"bower:install",
 			"libs-copy",
-			"uglify:libraries",
+			"terser:libraries",
 			"less:libraries"
 		]
 	);

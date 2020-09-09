@@ -16,7 +16,7 @@ module.exports = function(grunt, config, assets)
 			files: [],
 			tasks: ['assets-debug']
 		};
-		config.uglify.assets = {
+		config.terser.assets = {
 			files: {}
 		};
 
@@ -24,7 +24,7 @@ module.exports = function(grunt, config, assets)
 		_.each(assets, function(files, key){
 			var dest = '<%= jsFolder %>/' + key + '.js';
 			var src = '<%= build.assets.' + key + ' %>';
-			config.uglify.assets.files[dest] = src;
+			config.terser.assets.files[dest] = src;
 			config.watch.assets.files.push(src);
 			config.clean.assets.push(dest + '.map', dest);
 			config.concat[key] = {
@@ -37,7 +37,7 @@ module.exports = function(grunt, config, assets)
 		});
 
 		// Release tasks
-		releaseTasks.push('clean:assets', 'uglify:assets');
+		releaseTasks.push('clean:assets', 'terser:assets');
 	}
 
 	grunt.registerTask(
