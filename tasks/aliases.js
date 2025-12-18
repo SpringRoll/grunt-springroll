@@ -106,7 +106,6 @@ module.exports = function(grunt)
 		"libs",
 		"Import external client-side dependencies using Bower", [
 			"clean:libraries",
-			"bower:install",
 			"libs-copy",
 			"terser:libraries",
 			"less:libraries"
@@ -117,7 +116,6 @@ module.exports = function(grunt)
 		"libs-debug",
 		"Import using Bower and build debug versions of libraries", [
 			"clean:libraries",
-			"bower:install",
 			"libs-copy",
 			"concat:libraries",
 			"less:libraries-debug"
